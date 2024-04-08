@@ -229,6 +229,8 @@ public class TicTacToe {
       } else 
       {
         System.out.println("AI played on occupied tile");
+
+        //Trying again
       }
     }
 
@@ -284,14 +286,13 @@ public class TicTacToe {
         {
           PlaceForAlgo(0,2);
         
-        } else if ((isOccupied(0,0) == true || isOccupied(2,0) == true) && isOccupied(1,0) == false) //If player places in the corners, AI will play on the adjacent edge piece.
+        } else if ((isOccupied(0,0) == true || isOccupied(2,0) == true) && isOccupied(1,1) == false) //If player places in the corners, AI will play on the adjacent edge piece.
         {
-          PlaceForAlgo(1,0);
+          PlaceForAlgo(1,1);
           
-        }else if((isOccupied(0,2) == true || isOccupied(2,2) == true) && isOccupied(1,2) == false)
+        }else if((isOccupied(0,2) == true || isOccupied(2,2) == true) && isOccupied(1,1) == false)
         {
-          PlaceForAlgo(1,2);
-          
+          PlaceForAlgo(1,1);       
         } else
         {
           int randomIndex = (int) (Math.random() * emptySpots.size());
